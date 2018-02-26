@@ -1,0 +1,8 @@
+---
+layout: default
+---
+
+<h4>{{ page.title | escape }}</h4>
+{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+<div style="margin-bottom:10px">{{ page.date | date: date_format }}</div>
+{{ content }}

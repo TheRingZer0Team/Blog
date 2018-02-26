@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<h3>RingZer0 Team Online CTF</h3>
+<p>RingZer0 Team's online CTF offers you tons of challenges designed to test and improve your hacking skills through hacking challenges. Register and get a flag for every challenge.</p>
+<hr />
+<br />
+{% if site.posts.size > 0 %}
+  {% for post in site.posts %}
+    <a href="{{post.url | relative_url}}"><h4>{{ post.title | escape }}</h4></a>
+    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+    <div style="margin-bottom:10px">{{ post.date | date: date_format }}</div>
+    {{ post.excerpt }}
+    <a href="{{post.url | relative_url }}">Read more</a>
+    <hr />
+    <br />
+  {% endfor %}
+{% endif %}
+
